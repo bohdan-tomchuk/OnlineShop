@@ -1,0 +1,142 @@
+.cart {
+    &__body {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        z-index: 1;
+        height: 100%;
+        max-width: 43rem;
+        width: 100%;
+        top: 0;
+        right: -150%;
+        background-color: #fff;
+        transition: all .5s ease-out;
+
+        &.active {
+            right: 0;
+            z-index: 999;
+        }
+    }
+
+    &__header {
+        min-height: 6.25rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 3.3rem 0 1.2rem;
+        border-bottom: 1px solid $mischka;
+    }
+
+    &__close {
+
+        &:hover path {
+            fill: $persimmon;
+        }
+    }
+
+    &__title {
+        @extend %circe-extrabold;
+        font-size: 1.1rem;
+    }
+
+    &__main {
+        flex: 1;
+    }
+
+    &__footer {
+        min-height: 134px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+
+    &__summary {
+        flex: 1;
+        border-top: 1px solid $mischka;
+        padding: 0 9rem 0 1.2rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__output {
+        @extend %circe-extrabold;
+        font-size: 1.1rem;
+    }
+}
+
+.cart-item {
+    display: flex;
+    border-bottom: 1px solid $mischka;
+
+    &>* {
+        display: flex;
+        align-items: center;
+    }
+
+    &__main {
+        flex-direction: column;
+        flex: 1;
+        justify-content: space-between;
+        padding: 1rem 0 3rem 1.2rem;
+    }
+
+    &__row {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    &__name {
+        @extend %circe-regular;
+        color: $ebony;
+        font-size: 1.1rem;
+        letter-spacing: .02rem;
+        margin-right: .4rem;
+    }
+
+    &__type {
+        @extend %circe-regular;
+        color: $mid-gray;
+        font-size: 1rem;
+        letter-spacing: .02rem;
+    }
+
+    &__close {
+        min-width: 144px;
+        display: flex;
+        justify-content: center;
+
+        svg:hover path {
+            fill: $persimmon;
+        }
+    }
+
+    &__quantity {
+        display: flex;
+        align-items: center;
+
+        p {
+            @extend %circe-regular;
+            font-size: 1rem;
+            margin-right: 1.2rem;
+        }
+
+        input {
+            @extend %circe-regular;
+            font-size: 1rem;
+            appearance: none;
+            border: none;
+            max-width: 33px;
+            text-align: center;
+        }
+    }
+
+    &__price {
+        @extend %circe-bold;
+        font-size: 1.1rem;
+        color: $ebony;
+        display: flex;
+        align-items: center;
+    }
+}

@@ -1,0 +1,28 @@
+.breadcrumps {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    margin-top: 2rem;
+    a {
+        color: #fff;
+        &:after {
+            content: url('/img/base/triangle.svg');
+            display: inline-block;
+            margin: 0 10px;
+        }
+    }
+
+    span {
+    }
+
+    @include mq('phone-wide') {
+        margin-top: 0;
+        a {
+            font-size: 12px;
+            &:after {
+                margin: 0 5px;
+            }
+        }
+    }
+}
