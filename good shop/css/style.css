@@ -39,6 +39,7 @@
 .cart-item__type,
 .cart-item__quantity p,
 .cart-item__quantity input,
+.aside-nav__item a {
 .footer-nav__item a {
   font-family: 'circe', sans-serif;
   font-weight: 400;
@@ -209,6 +210,7 @@ a {
   left: 0;
   border-bottom: 1px solid #D2D4DA;
   background: #fff;
+  z-index: 10;
 }
 
 .header__content {
@@ -691,6 +693,13 @@ a {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+  overflow: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.cart__main::-webkit-scrollbar {
+  display: none;
 }
 
 .cart__footer {
@@ -815,7 +824,7 @@ a {
      -moz-appearance: none;
           appearance: none;
   border: none;
-  max-width: 33px;
+  width: 33px;
   text-align: center;
 }
 
@@ -854,6 +863,47 @@ a {
   z-index: 99;
 }
 
+.aside {
+  position: fixed;
+  max-width: 25.5rem;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  padding: 12rem 0 0 8rem;
+  margin-top: 6.25rem;
+  border-right: 1px solid #D2D4DA;
+}
+
+.aside__social a {
+  margin-right: 2rem;
+  text-decoration: none;
+}
+
+.aside__social a:hover svg path {
+  fill: #101223;
+}
+
+.aside-nav {
+  margin-bottom: 3rem;
+}
+
+.aside-nav__item:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+
+.aside-nav__item:nth-last-child(3) {
+  margin-bottom: 3.8rem;
+}
+
+.aside-nav__item a {
+  font-size: 1.2rem;
+  color: #282A3A;
+  text-decoration: none;
+  letter-spacing: .02rem;
+}
+
+.aside-nav__item:hover a {
 .footer-nav:first-child {
   margin-right: 8rem;
 }
@@ -873,6 +923,9 @@ a {
   color: #101223;
 }
 
+.main {
+  margin-top: 6.25rem;
+  z-index: 5;
 .footer-nav__title {
   margin-bottom: 1rem;
   font-size: 1.2rem;

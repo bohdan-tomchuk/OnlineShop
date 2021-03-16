@@ -1,0 +1,23 @@
+.aside  {
+    position: fixed;
+    max-width: 25.5rem;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    padding: 12rem 0 0 8rem;
+    margin-top: 6.25rem;
+    border-right: 1px solid $mischka;
+
+    &__social {
+
+        a {
+            margin-right: 2rem;
+            text-decoration: none;
+
+            &:hover svg path{
+                fill: $ebony;
+            }
+        }
+    }
+}
