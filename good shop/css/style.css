@@ -32,11 +32,14 @@
 
 .header__search.search input,
 .header__lang a,
+.footer__copy,
+.footer__politics,
 .a-btn,
 .cart-item__name,
 .cart-item__type,
 .cart-item__quantity p,
-.cart-item__quantity input {
+.cart-item__quantity input,
+.footer-nav__item a {
   font-family: 'circe', sans-serif;
   font-weight: 400;
 }
@@ -50,7 +53,8 @@
 .header__lang a.active,
 .header__likes span,
 .header__cart span,
-.cart-item__price {
+.cart-item__price,
+.footer-nav__title {
   font-family: 'circe_bold', sans-serif;
   font-weight: 700;
 }
@@ -322,6 +326,52 @@ a {
 .header__cart span {
   font-size: 1rem;
   color: #5B5D6B;
+}
+
+.footer {
+  padding-left: 25.5rem;
+  width: 100%;
+}
+
+.footer__body {
+  border-top: 1px solid #D2D4DA;
+}
+
+.footer__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 1.6rem 0 .8rem 0;
+  border-bottom: 1px solid #D2D4DA;
+}
+
+.footer__bottom {
+  padding: 1rem 0 1.3rem;
+}
+
+.footer__copy {
+  text-decoration: none;
+  color: #282A3A;
+  font-size: 1.1rem;
+  letter-spacing: .02rem;
+  margin-right: 8rem;
+}
+
+.footer__copy:hover {
+  color: #101223;
+}
+
+.footer__politics {
+  text-decoration: none;
+  color: #282A3A;
+  font-size: 1.1rem;
+  letter-spacing: .02rem;
+  border-bottom: 1px solid #282A3A;
+}
+
+.footer__politics:hover {
+  color: #101223;
+  border-bottom: 1px solid #101223;
 }
 
 .a-btn {
@@ -802,6 +852,30 @@ a {
 
 .overlay.e--header {
   z-index: 99;
+}
+
+.footer-nav:first-child {
+  margin-right: 8rem;
+}
+
+.footer-nav__item {
+  margin-bottom: .8rem;
+}
+
+.footer-nav__item a {
+  font-size: 1.1rem;
+  text-decoration: none;
+  color: #282A3A;
+}
+
+.footer-nav__item:hover a {
+  border-bottom: 2px solid #101223;
+  color: #101223;
+}
+
+.footer-nav__title {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
 }
 
 .swiper-container {
